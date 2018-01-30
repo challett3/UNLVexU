@@ -129,78 +129,78 @@ task usercontrol()
 		They will be split into 2 sections, the Mobile Goal Lifts and the Cone Lift
 		*/
 		//Set Mobile Higher or Lower
-		if(vexRT[Btn7D] == 1){
+		if(vexRT[Btn8U] == 1){
 			mobileLowerIfTrue = true;
 		}
-		else if(vexRT[Btn7L] == 1){
+		else if(vexRT[Btn8L] == 1){
 			mobileLowerIfTrue = false;
 		}
 		//Mobile Goal Lift
 		/*if(vexRT[Btn5U] == 1){
-			//if(mobileLowerIfTrue && SensorValue[mobileLowerAngle] < 3600){
+		//if(mobileLowerIfTrue && SensorValue[mobileLowerAngle] < 3600){
 
-			//}
-			else if(SensorValue[mobileHigherAngle] < 3600){
-				motor[liftMobileHigherLeft] = 127;
-				motor[liftMobileHigherRight] = 127;
-			}
-				motor[liftMobileLowerLeft] = 127;
-				motor[liftMobileLowerRight] = 127;
+		//}
+		else if(SensorValue[mobileHigherAngle] < 3600){
+		motor[liftMobileHigherLeft] = 127;
+		motor[liftMobileHigherRight] = 127;
+		}
+		motor[liftMobileLowerLeft] = 127;
+		motor[liftMobileLowerRight] = 127;
 		}
 		else if(vexRT[Btn5D] == 1){
-			if(mobileLowerIfTrue && SensorValue[mobileLowerAngle] > 360){
-				motor[liftMobileLowerLeft] = -67;
-				motor[liftMobileLowerRight] = -67;
-			}
-			else if(SensorValue[mobileHigherAngle] > 360){
-				motor[liftMobileHigherLeft] = -67;
-				motor[liftMobileHigherRight] = -67;
-			}
+		if(mobileLowerIfTrue && SensorValue[mobileLowerAngle] > 360){
+		motor[liftMobileLowerLeft] = -67;
+		motor[liftMobileLowerRight] = -67;
+		}
+		else if(SensorValue[mobileHigherAngle] > 360){
+		motor[liftMobileHigherLeft] = -67;
+		motor[liftMobileHigherRight] = -67;
+		}
 		}
 		else{
-			motor[liftMobileLowerLeft] = 0;
-			motor[liftMobileLowerRight] = 0;
-			motor[liftMobileHigherLeft] = 0;
-			motor[liftMobileHigherRight] = 0;
+		motor[liftMobileLowerLeft] = 0;
+		motor[liftMobileLowerRight] = 0;
+		motor[liftMobileHigherLeft] = 0;
+		motor[liftMobileHigherRight] = 0;
 		}*/
 
 		//low lift
 		if(vexRT[Btn5U]){
-		while(SensorValue[mobileLowerAngle] < 3100){
-			//goes up
-			motor[liftMobileLowerLeft] = 127;
-			motor[liftMobileLowerRight] = 127;
-		}
-	}else if(vexRT[Btn5D]){
-		while(SensorValue[mobileLowerAngle] > 2500){
-			//goes down
-			motor[liftMobileLowerLeft] = -127;
-			motor[liftMobileLowerRight] = -127;
-		}
-	}else{
+			while(SensorValue[mobileLowerAngle] < 3100){
+				//goes up
+				motor[liftMobileLowerLeft] = 127;
+				motor[liftMobileLowerRight] = 127;
+			}
+			}else if(vexRT[Btn5D]){
+			while(SensorValue[mobileLowerAngle] > 2500){
+				//goes down
+				motor[liftMobileLowerLeft] = -127;
+				motor[liftMobileLowerRight] = -127;
+			}
+			}else{
 			motor[liftMobileLowerLeft] = 0;
 			motor[liftMobileLowerRight] = 0;
-	}
+		}
 
 
 
 		//High lift
-	if(vexRT[Btn6U]){
-		//while(SensorValue[mobileHigherAngle] < 4100){
+		if(vexRT[Btn6U]){
+			//while(SensorValue[mobileHigherAngle] < 4100){
 			//goes up
 			motor[liftMobileHigherLeft] = 127;
 			motor[liftMobileHigherRight] = 127;
-		//}
-	}else if(vexRT[Btn6D]){
-		//while(SensorValue[mobileHigherAngle] > 700){
+			//}
+			}else if(vexRT[Btn6D]){
+			//while(SensorValue[mobileHigherAngle] > 700){
 			//goes down
 			motor[liftMobileHigherLeft] = -127;
 			motor[liftMobileHigherRight] = -127;
-	//	}
-	}else{
+			//	}
+			}else{
 			motor[liftMobileHigherLeft] = 0;
 			motor[liftMobileHigherRight] = 0;
-	}
+		}
 
 
 
@@ -208,16 +208,16 @@ task usercontrol()
 
 		/*Cone Lift
 		if(vexRT[Btn6U] == 1 && SensorValue[mobileHigherAngle] < 3600){
-			motor[liftConeLeft] = 127;
-			motor[liftConeRight] = 127;
+		motor[liftConeLeft] = 127;
+		motor[liftConeRight] = 127;
 		}
 		else if(vexRT[Btn6D] == 1 && SensorValue[mobileHigherAngle] > 360){
-			motor[liftConeLeft] = -127;
-			motor[liftConeRight] = -127;
+		motor[liftConeLeft] = -127;
+		motor[liftConeRight] = -127;
 		}
 		else{
-			motor[liftConeLeft] = 0;
-			motor[liftConeRight] = 0;
+		motor[liftConeLeft] = 0;
+		motor[liftConeRight] = 0;
 		}*/
 
 
