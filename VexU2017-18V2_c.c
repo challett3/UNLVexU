@@ -100,6 +100,7 @@ task autonomous()
 task usercontrol()
 {
 	// User control code here, inside the loop
+	bool mobileForward = true;
 
 	while (true)
 	{
@@ -107,7 +108,18 @@ task usercontrol()
 		Drive
 		Calls driveFunctions program to change motor speeds
 		*/
-		setMotorSpeed(vexRT[Ch2], vexRT[Ch3]);
+		if(mobileForward){
+			setMotorSpeed(vexRT[Ch2], vexRT[Ch3]);
+		}
+		else{
+			setMotorSpeed(vexRT[Ch3], vexRT[Ch2]);
+		}
+		if(vexRT[Btn8D] == 1){
+			mobileForward = false;
+		}
+		else if(vexRT[Btn8R] == 1){
+			mobileForward = true;
+		}
 
 		/*
 		Lift Program
