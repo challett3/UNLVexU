@@ -2,6 +2,8 @@
 #pragma config(Sensor, in1,    mobileLowerAngle, sensorPotentiometer)
 #pragma config(Sensor, in2,    mobileHigherAngle, sensorPotentiometer)
 #pragma config(Sensor, in3,    coneAngle,      sensorPotentiometer)
+#pragma config(Sensor, dgtl1,  mobileLiftPneumatics, sensorDigitalOut)
+#pragma config(Sensor, dgtl2,  coneLiftPneumatics, sensorDigitalOut)
 #pragma config(Sensor, I2C_1,  leftDrive,      sensorQuadEncoderOnI2CPort,    , AutoAssign )
 #pragma config(Sensor, I2C_2,  rightDrive,     sensorQuadEncoderOnI2CPort,    , AutoAssign )
 #pragma config(Motor,  port1,           driveBackLeft, tmotorVex393HighSpeed_HBridge, openLoop, reversed, driveLeft, encoderPort, I2C_1)
@@ -217,5 +219,26 @@ task usercontrol()
 			motor[liftConeLeft] = 0;
 			motor[liftConeRight] = 0;
 		}*/
+
+
+
+		//Pneumatic Lift Systems
+		if(vexRT[Btn7L] == 1){
+			//Activates Mobile Lift Pneumatics
+			SensorValue[mobileLiftPneumatics] = 1;
+		}
+		else if(vexRT[Btn7D] == 1){
+			//Deactivates Mobile Lift Pneumatics
+			SensorValue[mobileLiftPneumatics] = 0;
+		}
+
+		if(vexRT[Btn7U] == 1){
+			//Activates Cone Lift Pneumatics
+			SensorValue[coneLiftPneumatics] = 1;
+		}
+		else if(vexRT[Btn7R] == 1){
+			//Deactivates Cone Lift Pneumatics
+			SensorValue[coneLiftPneumatics] = 0;
+		}
 	}
 }
