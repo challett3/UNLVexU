@@ -140,21 +140,21 @@ task usercontrol()
 
 		//low lift
 		if(vexRT[Btn5U]){
-			while(SensorValue[mobileLowerAngle] < 3100){
-				//goes up
-				motor[liftMobileLowerLeft] = 127;
-				motor[liftMobileLowerRight] = 127;
-			}
-			}else if(vexRT[Btn5D]){
-			while(SensorValue[mobileLowerAngle] > 2500){
-				//goes down
-				motor[liftMobileLowerLeft] = -127;
-				motor[liftMobileLowerRight] = -127;
-			}
-			}else{
+		while(SensorValue[mobileLowerAngle] < 3100){
+			//goes up
+			motor[liftMobileLowerLeft] = 127;
+			motor[liftMobileLowerRight] = 127;
+		}
+	}else if(vexRT[Btn5D]){
+		while(SensorValue[mobileLowerAngle] > 2500){
+			//goes down
+			motor[liftMobileLowerLeft] = -127;
+			motor[liftMobileLowerRight] = -127;
+		}
+	}else{
 			motor[liftMobileLowerLeft] = 0;
 			motor[liftMobileLowerRight] = 0;
-		}
+	}
 
 		//High lift
 		if(vexRT[Btn6U]){
@@ -192,5 +192,6 @@ task usercontrol()
 			//Deactivates Cone Lift Pneumatics
 			SensorValue[coneLiftPneumatics] = 0;
 		}
+
 	}
 }
