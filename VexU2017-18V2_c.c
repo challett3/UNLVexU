@@ -152,8 +152,6 @@ task usercontrol()
 			motor[liftMobileLowerRight] = 0;
 	}
 
-
-
 		//High lift
 	if(vexRT[Btn6U]){
 		//while(SensorValue[mobileHigherAngle] < 4100){
@@ -171,23 +169,7 @@ task usercontrol()
 			motor[liftMobileHigherLeft] = 0;
 			motor[liftMobileHigherRight] = 0;
 	}
-
-
-
-
-
-		/*Cone Lift
-		if(vexRT[Btn6U] == 1 && SensorValue[mobileHigherAngle] < 3600){
-			motor[liftConeLeft] = 127;
-			motor[liftConeRight] = 127;
-		}
-		else if(vexRT[Btn6D] == 1 && SensorValue[mobileHigherAngle] > 360){
-			motor[liftConeLeft] = -127;
-			motor[liftConeRight] = -127;
-		}
-		else{
-			motor[liftConeLeft] = 0;
-			motor[liftConeRight] = 0;
-		}*/
+		
+		
 	}
 }
