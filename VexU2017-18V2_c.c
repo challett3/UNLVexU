@@ -137,34 +137,6 @@ task usercontrol()
 		else if(vexRT[Btn8L] == 1){
 			mobileLowerIfTrue = false;
 		}
-		//Mobile Goal Lift
-		/*if(vexRT[Btn5U] == 1){
-		//if(mobileLowerIfTrue && SensorValue[mobileLowerAngle] < 3600){
-
-		//}
-		else if(SensorValue[mobileHigherAngle] < 3600){
-		motor[liftMobileHigherLeft] = 127;
-		motor[liftMobileHigherRight] = 127;
-		}
-		motor[liftMobileLowerLeft] = 127;
-		motor[liftMobileLowerRight] = 127;
-		}
-		else if(vexRT[Btn5D] == 1){
-		if(mobileLowerIfTrue && SensorValue[mobileLowerAngle] > 360){
-		motor[liftMobileLowerLeft] = -67;
-		motor[liftMobileLowerRight] = -67;
-		}
-		else if(SensorValue[mobileHigherAngle] > 360){
-		motor[liftMobileHigherLeft] = -67;
-		motor[liftMobileHigherRight] = -67;
-		}
-		}
-		else{
-		motor[liftMobileLowerLeft] = 0;
-		motor[liftMobileLowerRight] = 0;
-		motor[liftMobileHigherLeft] = 0;
-		motor[liftMobileHigherRight] = 0;
-		}*/
 
 		//low lift
 		if(vexRT[Btn5U]){
@@ -184,8 +156,6 @@ task usercontrol()
 			motor[liftMobileLowerRight] = 0;
 		}
 
-
-
 		//High lift
 		if(vexRT[Btn6U]){
 			//while(SensorValue[mobileHigherAngle] < 4100){
@@ -203,26 +173,6 @@ task usercontrol()
 			motor[liftMobileHigherLeft] = 0;
 			motor[liftMobileHigherRight] = 0;
 		}
-
-
-
-
-
-		/*Cone Lift
-		if(vexRT[Btn6U] == 1 && SensorValue[mobileHigherAngle] < 3600){
-		motor[liftConeLeft] = 127;
-		motor[liftConeRight] = 127;
-		}
-		else if(vexRT[Btn6D] == 1 && SensorValue[mobileHigherAngle] > 360){
-		motor[liftConeLeft] = -127;
-		motor[liftConeRight] = -127;
-		}
-		else{
-		motor[liftConeLeft] = 0;
-		motor[liftConeRight] = 0;
-		}*/
-
-
 
 		//Pneumatic Lift Systems
 		if(vexRT[Btn7L] == 1){
